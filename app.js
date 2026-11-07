@@ -53,6 +53,7 @@
   function showComplete() {
     byId('file').hidden = true;
     byId('complete').classList.add('show');
+    window.scrollTo(0, 0);
   }
 
   function choose(event) {
@@ -83,6 +84,7 @@
     byId('complete').classList.remove('show');
     byId('file').hidden = false;
     render();
+    window.scrollTo(0, 0);
   });
   byId('audio').addEventListener('click', function () {
     var isOn = byId('audio').getAttribute('aria-pressed') === 'true';
